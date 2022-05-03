@@ -31,7 +31,8 @@ const app = new Vue({
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             }
         ],
-        currentSlideIndex: 0
+        currentSlideIndex: 0,
+        interval: null
         
     },
 
@@ -53,13 +54,18 @@ const app = new Vue({
             }
 
         },
-
-
+        disactiveInterval(){
+            console.log('ci so')
+            clearInterval(this.interval)
+        },
+        reactiveInterval(){
+            this.interval = setInterval(this.next, 3000);
+        }
 
     },
     mounted() {
-        setInterval(this.next, 3000);
         
+        this.reactiveInterval()
 
     }
 })

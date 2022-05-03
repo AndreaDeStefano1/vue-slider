@@ -34,7 +34,9 @@
                     <div class="thumb "
                         v-for="(slide, index) in slides"
                         :class=" currentSlideIndex == index ? 'active' :''  "  
-                        @click=" currentSlideIndex = index">
+                        @click=" currentSlideIndex = index"
+                        @mouseover=" disactiveInterval() "
+                        @mouseleave="reactiveInterval()">
                         <img :src="slide.image" :alt="slide.title" />
                     </div>
                 </div>
