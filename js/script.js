@@ -54,16 +54,12 @@ const app = new Vue({
 
         },
 
-        cambioValore(){
-            this.currentSlideIndex++;
-
-        }
 
 
     },
     mounted() {
         setInterval(this.next, 3000);
- 
+        
 
     }
 })
