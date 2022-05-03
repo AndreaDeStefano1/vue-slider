@@ -62,7 +62,7 @@ const app = new Vue({
 
     },
     mounted() {
-        
+        setInterval(this.next, 3000);
  
 
     }
